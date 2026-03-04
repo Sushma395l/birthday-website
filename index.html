@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    overflow:hidden;
+}
+
+/* Wrapper */
+.wrapper{
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+}
+
+/* Slider */
+.slider{
+    display:flex;
+    width:400vw;
+    height:100vh;
+    transition:0.6s ease-in-out;
+}
+
+/* Pages */
+.page{
+    width:100vw;
+    height:100vh;
+    flex-shrink:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    color:white;
+    position:relative;
+}
+
+/* Backgrounds */
+.page1{ background:linear-gradient(135deg,#ff758c,#ff7eb3); }
+.page2{ background:linear-gradient(135deg,#667eea,#764ba2); }
+.page3{ background:linear-gradient(135deg,#f7971e,#ffd200); }
+.page4{ background:linear-gradient(135deg,#11998e,#38ef7d); }
+
+/* Buttons */
+button{
+    padding:10px 20px;
+    margin:10px;
+    border:none;
+    border-radius:25px;
+    font-size:16px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.next{ background:white; color:#333; }
+.prev{ background:#333; color:white; }
+
+/* ❤️ HEART COLLAGE */
+.heart-collage{
+    display:grid;
+    grid-template-columns: repeat(7, 60px);
+    grid-template-rows: repeat(6, 60px);
+    gap:6px;
+    justify-content:center;
+    margin:20px 0;
+}
+
+.heart-collage img{
+    width:60px;
+    height:60px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+/* Heart shape positioning */
+.heart-collage img:nth-child(1){ grid-column:2; grid-row:1; }
+.heart-collage img:nth-child(2){ grid-column:3; grid-row:1; }
+.heart-collage img:nth-child(3){ grid-column:5; grid-row:1; }
+.heart-collage img:nth-child(4){ grid-column:6; grid-row:1; }
+
+.heart-collage img:nth-child(5){ grid-column:1; grid-row:2; }
+.heart-collage img:nth-child(6){ grid-column:2; grid-row:2; }
+.heart-collage img:nth-child(7){ grid-column:3; grid-row:2; }
+.heart-collage img:nth-child(8){ grid-column:4; grid-row:2; }
+.heart-collage img:nth-child(9){ grid-column:5; grid-row:2; }
+.heart-collage img:nth-child(10){ grid-column:6; grid-row:2; }
+.heart-collage img:nth-child(11){ grid-column:7; grid-row:2; }
+
+.heart-collage img:nth-child(12){ grid-column:2; grid-row:3; }
+.heart-collage img:nth-child(13){ grid-column:3; grid-row:3; }
+.heart-collage img:nth-child(14){ grid-column:4; grid-row:3; }
+.heart-collage img:nth-child(15){ grid-column:5; grid-row:3; }
+.heart-collage img:nth-child(16){ grid-column:6; grid-row:3; }
+
+.heart-collage img:nth-child(17){ grid-column:3; grid-row:4; }
+.heart-collage img:nth-child(18){ grid-column:4; grid-row:4; }
+.heart-collage img:nth-child(19){ grid-column:5; grid-row:4; }
+
+/* Bottom tip */
+.heart-collage img:nth-child(20){
+    grid-column:4;
+    grid-row:5;
+}
+
+/* Video */
+video{
+    width:90%;
+    max-width:400px;
+    border-radius:15px;
+    margin:20px 0;
+}
+
+/* Confetti */
+.confetti{
+    position:absolute;
+    width:8px;
+    height:8px;
+    top:-10px;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+        opacity:0;
+    }
+}
+
+/* Mobile */
+@media(max-width:480px){
+    .heart-collage{
+        transform:scale(0.8);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+<div class="slider" id="slider">
+
+<!-- PAGE 1 -->
+<div class="page page1">
+    <h1>🎂 Happy Birthday ❤️</h1>
+    <p>You are my happiness, my smile, my everything 💖</p>
+    <button class="next" onclick="nextSlide()">open ➡</button>
+</div>
+
+<!-- PAGE 2 - HEART COLLAGE -->
+<div class="page page2">
+    <h1>💝 Our Memories</h1>
+    <div class="heart-collage">
+        <!-- Replace with your real images -->
+        <img src="https://picsum.photos/100?1">
+        <img src="https://picsum.photos/100?2">
+        <img src="https://picsum.photos/100?3">
+        <img src="https://picsum.photos/100?4">
+        <img src="https://picsum.photos/100?5">
+        <img src="https://picsum.photos/100?6">
+        <img src="https://picsum.photos/100?7">
+        <img src="https://picsum.photos/100?8">
+        <img src="https://picsum.photos/100?9">
+        <img src="https://picsum.photos/100?10">
+        <img src="https://picsum.photos/100?11">
+        <img src="https://picsum.photos/100?12">
+        <img src="https://picsum.photos/100?13">
+        <img src="https://picsum.photos/100?14">
+        <img src="https://picsum.photos/100?15">
+        <img src="https://picsum.photos/100?16">
+        <img src="https://picsum.photos/100?17">
+        <img src="https://picsum.photos/100?18">
+        <img src="https://picsum.photos/100?19">
+        <img src="https://picsum.photos/100?20">
+    </div>
+    <button class="prev" onclick="prevSlide()">⬅ Back</button>
+    <button class="next" onclick="nextSlide()">Next ➡</button>
+</div>
+
+<!-- PAGE 3 - VIDEO -->
+<div class="page page3">
+    <h1>🎥 Special Video</h1>
+    <video controls>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+    <button class="prev" onclick="prevSlide()">⬅ Back</button>
+    <button class="next" onclick="nextSlide()">Next ➡</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page page4">
+    <h1>💌 Final Message</h1>
+    <p>
+        May this birthday bring you endless joy,  
+        success and love.  
+        I am always lucky to have you in my life ❤️
+    </p>
+    <button class="prev" onclick="prevSlide()">⬅ Back</button>
+</div>
+
+</div>
+</div>
+
+<script>
+let currentSlide = 0;
+const slider = document.getElementById("slider");
+
+function nextSlide(){
+    if(currentSlide < 3){
+        currentSlide++;
+        slider.style.transform = "translateX(-" + (currentSlide * 100) + "vw)";
+        startConfetti();
+    }
+}
+
+function prevSlide(){
+    if(currentSlide > 0){
+        currentSlide--;
+        slider.style.transform = "translateX(-" + (currentSlide * 100) + "vw)";
+        startConfetti();
+    }
+}
+
+function startConfetti(){
+    for(let i=0;i<120;i++){
+        let confetti=document.createElement("div");
+        confetti.classList.add("confetti");
+        document.body.appendChild(confetti);
+
+        confetti.style.left=Math.random()*window.innerWidth+"px";
+        confetti.style.backgroundColor=
+        "hsl("+Math.random()*360+",100%,50%)";
+        confetti.style.animationDuration=
+        (Math.random()*3+2)+"s";
+
+        setTimeout(()=>{ confetti.remove(); },5000);
+    }
+}
+
+window.onload = startConfetti;
+</script>
+
+</body>
+</html>
