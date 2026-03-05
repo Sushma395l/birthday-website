@@ -3,14 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Wedding Anniversary ❤️</title>
+<title>HAPPY BIRTHDAY ❤️</title>
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: Arial, sans-serif;
+font-family:Arial, sans-serif;
+}
+
+body{
+overflow:hidden;
 }
 
 /* PASSWORD PAGE */
@@ -41,10 +45,6 @@ font-weight:bold;
 }
 
 /* MAIN SITE */
-body{
-overflow:hidden;
-}
-
 .wrapper{
 width:100vw;
 height:100vh;
@@ -94,8 +94,8 @@ font-weight:bold;
 /* HEART COLLAGE */
 .heart-collage{
 display:grid;
-grid-template-columns: repeat(7, 60px);
-grid-template-rows: repeat(6, 60px);
+grid-template-columns:repeat(7,60px);
+grid-template-rows:repeat(6,60px);
 gap:6px;
 justify-content:center;
 margin:20px 0;
@@ -108,32 +108,36 @@ object-fit:cover;
 border-radius:10px;
 }
 
-/* heart positions */
-.heart-collage img:nth-child(1){ grid-column:2; grid-row:1; }
-.heart-collage img:nth-child(2){ grid-column:3; grid-row:1; }
-.heart-collage img:nth-child(3){ grid-column:5; grid-row:1; }
-.heart-collage img:nth-child(4){ grid-column:6; grid-row:1; }
+/* Heart shape */
+.heart-collage img:nth-child(1){grid-column:2;grid-row:1;}
+.heart-collage img:nth-child(2){grid-column:3;grid-row:1;}
+.heart-collage img:nth-child(3){grid-column:5;grid-row:1;}
+.heart-collage img:nth-child(4){grid-column:6;grid-row:1;}
 
-.heart-collage img:nth-child(5){ grid-column:1; grid-row:2; }
-.heart-collage img:nth-child(6){ grid-column:2; grid-row:2; }
-.heart-collage img:nth-child(7){ grid-column:3; grid-row:2; }
-.heart-collage img:nth-child(8){ grid-column:4; grid-row:2; }
-.heart-collage img:nth-child(9){ grid-column:5; grid-row:2; }
-.heart-collage img:nth-child(10){ grid-column:6; grid-row:2; }
-.heart-collage img:nth-child(11){ grid-column:7; grid-row:2; }
+.heart-collage img:nth-child(5){grid-column:1;grid-row:2;}
+.heart-collage img:nth-child(6){grid-column:2;grid-row:2;}
+.heart-collage img:nth-child(7){grid-column:3;grid-row:2;}
+.heart-collage img:nth-child(8){grid-column:4;grid-row:2;}
+.heart-collage img:nth-child(9){grid-column:5;grid-row:2;}
+.heart-collage img:nth-child(10){grid-column:6;grid-row:2;}
+.heart-collage img:nth-child(11){grid-column:7;grid-row:2;}
 
-.heart-collage img:nth-child(12){ grid-column:2; grid-row:3; }
-.heart-collage img:nth-child(13){ grid-column:3; grid-row:3; }
-.heart-collage img:nth-child(14){ grid-column:4; grid-row:3; }
-.heart-collage img:nth-child(15){ grid-column:5; grid-row:3; }
-.heart-collage img:nth-child(16){ grid-column:6; grid-row:3; }
+.heart-collage img:nth-child(12){grid-column:2;grid-row:3;}
+.heart-collage img:nth-child(13){grid-column:3;grid-row:3;}
+.heart-collage img:nth-child(14){grid-column:4;grid-row:3;}
+.heart-collage img:nth-child(15){grid-column:5;grid-row:3;}
+.heart-collage img:nth-child(16){grid-column:6;grid-row:3;}
 
-.heart-collage img:nth-child(17){ grid-column:3; grid-row:4; }
-.heart-collage img:nth-child(18){ grid-column:4; grid-row:4; }
-.heart-collage img:nth-child(19){ grid-column:5; grid-row:4; }
+.heart-collage img:nth-child(17){grid-column:3;grid-row:4;}
+.heart-collage img:nth-child(18){grid-column:4;grid-row:4;}
+.heart-collage img:nth-child(19){grid-column:5;grid-row:4;}
 
-.heart-collage img:nth-child(20){ grid-column:4; grid-row:5; }
+.heart-collage img:nth-child(20){
+grid-column:4;
+grid-row:5;
+}
 
+/* Video */
 video{
 width:90%;
 max-width:400px;
@@ -141,7 +145,7 @@ border-radius:15px;
 margin:20px 0;
 }
 
-/* confetti */
+/* Confetti */
 .confetti{
 position:absolute;
 width:8px;
@@ -161,26 +165,28 @@ opacity:0;
 
 <body>
 
-<!-- PASSWORD SCREEN -->
+<!-- PASSWORD PAGE -->
 <div id="passwordPage">
 <h2>🔐 Enter Password</h2>
-<input type="password" id="passwordInput" placeholder="Akshu">
+<input type="password" id="passwordInput" placeholder="Enter password">
 <button onclick="checkPassword()">Open ❤️</button>
-<p id="error" style="color:yellow;"></p>
+<p id="error"></p>
 </div>
 
 <!-- MAIN WEBSITE -->
 <div class="wrapper" id="mainSite">
 <div class="slider" id="slider">
 
+<!-- PAGE 1 -->
 <div class="page page1">
-<h1>🎂 Happy Wedding Anniversary ❤️</h1>
-<p>You are my happiness, my strength, my everything 💖</p>
+<h1>HEY DEAR MINE 🧿❤️</h1>
+<p>I WISH YOU A LIFE TIME OF JOY AND HAPPINESS 😊💖</p>
 <button class="next" onclick="nextSlide()">Open ➡</button>
 </div>
 
+<!-- PAGE 2 -->
 <div class="page page2">
-<h1>💝 Our Memories</h1>
+<h1>💝 Our Memories🫠</h1>
 
 <div class="heart-collage">
 <img src="https://picsum.photos/100?1">
@@ -209,19 +215,23 @@ opacity:0;
 <button class="next" onclick="nextSlide()">Next ➡</button>
 </div>
 
+<!-- PAGE 3 -->
 <div class="page page3">
 <h1>🎥 Special Video</h1>
-<video controls>
+
+<video controls id="annivideo">
 <source src="video.mp4" type="video/mp4">
 </video>
+
 <button class="prev" onclick="prevSlide()">⬅ Back</button>
 <button class="next" onclick="nextSlide()">Next ➡</button>
 </div>
 
+<!-- PAGE 4 -->
 <div class="page page4">
 <h1>💌 Final Message</h1>
 <p>
-May this year bring you endless joy, success and love.  
+May this year bring you endless joy, success and love. I have seen the happiest version of myself when I am with you 💕 
 I am lucky to have you in my life ❤️
 </p>
 <button class="prev" onclick="prevSlide()">⬅ Back</button>
@@ -232,7 +242,8 @@ I am lucky to have you in my life ❤️
 
 <script>
 
-const correctPassword = "Akshu"; // CHANGE PASSWORD HERE
+/* PASSWORD */
+const correctPassword = "Akshu143";
 
 function checkPassword(){
 let input=document.getElementById("passwordInput").value;
@@ -247,6 +258,7 @@ document.getElementById("error").innerText="Wrong password!";
 }
 }
 
+/* SLIDER */
 let currentSlide=0;
 const slider=document.getElementById("slider");
 
@@ -266,6 +278,7 @@ startConfetti();
 }
 }
 
+/* CONFETTI */
 function startConfetti(){
 for(let i=0;i<120;i++){
 let confetti=document.createElement("div");
@@ -279,6 +292,13 @@ confetti.style.animationDuration=(Math.random()*3+2)+"s";
 setTimeout(()=>{confetti.remove();},5000);
 }
 }
+
+/* VIDEO START FROM 18s */
+const video=document.getElementById("annivideo");
+
+video.addEventListener("loadedmetadata",function(){
+video.currentTime=18;
+});
 
 </script>
 
