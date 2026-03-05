@@ -3,88 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy weddiing anniversy❤️</title>
+<title>Happy Wedding Anniversary ❤️</title>
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, sans-serif;
 }
 
+/* PASSWORD PAGE */
+#passwordPage{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+color:white;
+}
+
+#passwordPage input{
+padding:10px;
+border:none;
+border-radius:10px;
+margin:10px;
+font-size:16px;
+}
+
+#passwordPage button{
+padding:10px 20px;
+border:none;
+border-radius:20px;
+cursor:pointer;
+font-weight:bold;
+}
+
+/* MAIN SITE */
 body{
-    overflow:hidden;
+overflow:hidden;
 }
 
-/* Wrapper */
 .wrapper{
-    width:100vw;
-    height:100vh;
-    overflow:hidden;
+width:100vw;
+height:100vh;
+overflow:hidden;
+display:none;
 }
 
-/* Slider */
 .slider{
-    display:flex;
-    width:400vw;
-    height:100vh;
-    transition:0.6s ease-in-out;
+display:flex;
+width:400vw;
+height:100vh;
+transition:0.6s ease-in-out;
 }
 
-/* Pages */
 .page{
-    width:100vw;
-    height:100vh;
-    flex-shrink:0;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-    color:white;
-    position:relative;
+width:100vw;
+height:100vh;
+flex-shrink:0;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+color:white;
+position:relative;
 }
 
-/* Backgrounds */
 .page1{ background:linear-gradient(135deg,#ff758c,#ff7eb3); }
 .page2{ background:linear-gradient(135deg,#667eea,#764ba2); }
 .page3{ background:linear-gradient(135deg,#f7971e,#ffd200); }
 .page4{ background:linear-gradient(135deg,#11998e,#38ef7d); }
 
-/* Buttons */
 button{
-    padding:10px 20px;
-    margin:10px;
-    border:none;
-    border-radius:25px;
-    font-size:16px;
-    cursor:pointer;
-    font-weight:bold;
+padding:10px 20px;
+margin:10px;
+border:none;
+border-radius:25px;
+font-size:16px;
+cursor:pointer;
+font-weight:bold;
 }
 
 .next{ background:white; color:#333; }
 .prev{ background:#333; color:white; }
 
-/* ❤️ HEART COLLAGE */
+/* HEART COLLAGE */
 .heart-collage{
-    display:grid;
-    grid-template-columns: repeat(7, 60px);
-    grid-template-rows: repeat(6, 60px);
-    gap:6px;
-    justify-content:center;
-    margin:20px 0;
+display:grid;
+grid-template-columns: repeat(7, 60px);
+grid-template-rows: repeat(6, 60px);
+gap:6px;
+justify-content:center;
+margin:20px 0;
 }
 
 .heart-collage img{
-    width:60px;
-    height:60px;
-    object-fit:cover;
-    border-radius:10px;
+width:60px;
+height:60px;
+object-fit:cover;
+border-radius:10px;
 }
 
-/* Heart shape positioning */
+/* heart positions */
 .heart-collage img:nth-child(1){ grid-column:2; grid-row:1; }
 .heart-collage img:nth-child(2){ grid-column:3; grid-row:1; }
 .heart-collage img:nth-child(3){ grid-column:5; grid-row:1; }
@@ -108,151 +132,155 @@ button{
 .heart-collage img:nth-child(18){ grid-column:4; grid-row:4; }
 .heart-collage img:nth-child(19){ grid-column:5; grid-row:4; }
 
-/* Bottom tip */
-.heart-collage img:nth-child(20){
-    grid-column:4;
-    grid-row:5;
-}
+.heart-collage img:nth-child(20){ grid-column:4; grid-row:5; }
 
-/* Video */
 video{
-    width:90%;
-    max-width:400px;
-    border-radius:15px;
-    margin:20px 0;
+width:90%;
+max-width:400px;
+border-radius:15px;
+margin:20px 0;
 }
 
-/* Confetti */
+/* confetti */
 .confetti{
-    position:absolute;
-    width:8px;
-    height:8px;
-    top:-10px;
-    animation:fall linear forwards;
+position:absolute;
+width:8px;
+height:8px;
+top:-10px;
+animation:fall linear forwards;
 }
 
 @keyframes fall{
-    to{
-        transform:translateY(110vh) rotate(720deg);
-        opacity:0;
-    }
+to{
+transform:translateY(110vh) rotate(720deg);
+opacity:0;
 }
-
-/* Mobile */
-@media(max-width:480px){
-    .heart-collage{
-        transform:scale(0.8);
-    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="wrapper">
+<!-- PASSWORD SCREEN -->
+<div id="passwordPage">
+<h2>🔐 Enter Password</h2>
+<input type="password" id="passwordInput" placeholder="Enter password">
+<button onclick="checkPassword()">Open ❤️</button>
+<p id="error" style="color:yellow;"></p>
+</div>
+
+<!-- MAIN WEBSITE -->
+<div class="wrapper" id="mainSite">
 <div class="slider" id="slider">
 
-<!-- PAGE 1 -->
 <div class="page page1">
-    <h1>🎂 Happy wedding anniversy ❤️</h1>
-    <p>You are my happiness, my strength, my everything 💖</p>
-    <button class="next" onclick="nextSlide()">open ➡</button>
+<h1>🎂 Happy Wedding Anniversary ❤️</h1>
+<p>You are my happiness, my strength, my everything 💖</p>
+<button class="next" onclick="nextSlide()">Open ➡</button>
 </div>
 
-<!-- PAGE 2 - HEART COLLAGE -->
 <div class="page page2">
-    <h1>💝 Our Memories</h1>
-    <div class="heart-collage">
-        <!-- Replace with your real images -->
-        <img src="https://picsum.photos/100?1">
-        <img src="https://picsum.photos/100?2">
-        <img src="https://picsum.photos/100?3">
-        <img src="https://picsum.photos/100?4">
-        <img src="https://picsum.photos/100?5">
-        <img src="https://picsum.photos/100?6">
-        <img src="https://picsum.photos/100?7">
-        <img src="https://picsum.photos/100?8">
-        <img src="https://picsum.photos/100?9">
-        <img src="https://picsum.photos/100?10">
-        <img src="https://picsum.photos/100?11">
-        <img src="https://picsum.photos/100?12">
-        <img src="https://picsum.photos/100?13">
-        <img src="https://picsum.photos/100?14">
-        <img src="https://picsum.photos/100?15">
-        <img src="https://picsum.photos/100?16">
-        <img src="https://picsum.photos/100?17">
-        <img src="https://picsum.photos/100?18">
-        <img src="https://picsum.photos/100?19">
-        <img src="https://picsum.photos/100?20">
-    </div>
-    <button class="prev" onclick="prevSlide()">⬅ Back</button>
-    <button class="next" onclick="nextSlide()">Next ➡</button>
+<h1>💝 Our Memories</h1>
+
+<div class="heart-collage">
+<img src="https://picsum.photos/100?1">
+<img src="https://picsum.photos/100?2">
+<img src="https://picsum.photos/100?3">
+<img src="https://picsum.photos/100?4">
+<img src="https://picsum.photos/100?5">
+<img src="https://picsum.photos/100?6">
+<img src="https://picsum.photos/100?7">
+<img src="https://picsum.photos/100?8">
+<img src="https://picsum.photos/100?9">
+<img src="https://picsum.photos/100?10">
+<img src="https://picsum.photos/100?11">
+<img src="https://picsum.photos/100?12">
+<img src="https://picsum.photos/100?13">
+<img src="https://picsum.photos/100?14">
+<img src="https://picsum.photos/100?15">
+<img src="https://picsum.photos/100?16">
+<img src="https://picsum.photos/100?17">
+<img src="https://picsum.photos/100?18">
+<img src="https://picsum.photos/100?19">
+<img src="https://picsum.photos/100?20">
 </div>
 
-<!-- PAGE 3 - VIDEO -->
+<button class="prev" onclick="prevSlide()">⬅ Back</button>
+<button class="next" onclick="nextSlide()">Next ➡</button>
+</div>
+
 <div class="page page3">
-    <h1>🎥 Special Video</h1>
-    <video controls>
-        <source src="video.mp4" type="video/mp4">
-        Your browser does not support video.
-    </video>
-    <button class="prev" onclick="prevSlide()">⬅ Back</button>
-    <button class="next" onclick="nextSlide()">Next ➡</button>
+<h1>🎥 Special Video</h1>
+<video controls>
+<source src="video.mp4" type="video/mp4">
+</video>
+<button class="prev" onclick="prevSlide()">⬅ Back</button>
+<button class="next" onclick="nextSlide()">Next ➡</button>
 </div>
 
-<!-- PAGE 4 -->
 <div class="page page4">
-    <h1>💌 Final Message</h1>
-    <p>
-        May this year bring you endless joy,  
-        success and love.  
-        I am always lucky to have you in my life ❤️
-    </p>
-    <button class="prev" onclick="prevSlide()">⬅ Back</button>
+<h1>💌 Final Message</h1>
+<p>
+May this year bring you endless joy, success and love.  
+I am lucky to have you in my life ❤️
+</p>
+<button class="prev" onclick="prevSlide()">⬅ Back</button>
 </div>
 
 </div>
 </div>
 
 <script>
-let currentSlide = 0;
-const slider = document.getElementById("slider");
+
+const correctPassword = "1234"; // CHANGE PASSWORD HERE
+
+function checkPassword(){
+let input=document.getElementById("passwordInput").value;
+
+if(input===correctPassword){
+document.getElementById("passwordPage").style.display="none";
+document.getElementById("mainSite").style.display="block";
+startConfetti();
+}
+else{
+document.getElementById("error").innerText="Wrong password!";
+}
+}
+
+let currentSlide=0;
+const slider=document.getElementById("slider");
 
 function nextSlide(){
-    if(currentSlide < 3){
-        currentSlide++;
-        slider.style.transform = "translateX(-" + (currentSlide * 100) + "vw)";
-        startConfetti();
-    }
+if(currentSlide<3){
+currentSlide++;
+slider.style.transform="translateX(-"+(currentSlide*100)+"vw)";
+startConfetti();
+}
 }
 
 function prevSlide(){
-    if(currentSlide > 0){
-        currentSlide--;
-        slider.style.transform = "translateX(-" + (currentSlide * 100) + "vw)";
-        startConfetti();
-    }
+if(currentSlide>0){
+currentSlide--;
+slider.style.transform="translateX(-"+(currentSlide*100)+"vw)";
+startConfetti();
+}
 }
 
 function startConfetti(){
-    for(let i=0;i<120;i++){
-        let confetti=document.createElement("div");
-        confetti.classList.add("confetti");
-        document.body.appendChild(confetti);
+for(let i=0;i<120;i++){
+let confetti=document.createElement("div");
+confetti.classList.add("confetti");
+document.body.appendChild(confetti);
 
-        confetti.style.left=Math.random()*window.innerWidth+"px";
-        confetti.style.backgroundColor=
-        "hsl("+Math.random()*360+",100%,50%)";
-        confetti.style.animationDuration=
-        (Math.random()*3+2)+"s";
+confetti.style.left=Math.random()*window.innerWidth+"px";
+confetti.style.backgroundColor="hsl("+Math.random()*360+",100%,50%)";
+confetti.style.animationDuration=(Math.random()*3+2)+"s";
 
-        setTimeout(()=>{ confetti.remove(); },5000);
-    }
+setTimeout(()=>{confetti.remove();},5000);
+}
 }
 
-window.onload = startConfetti;
 </script>
 
 </body>
-
 </html>
